@@ -33,9 +33,6 @@ public class MainStore {
     private String stockSpicesTypeOut;
     private String storeKeeperOut;
     private double QuantityOut;
-    private double totalPriceOut;
-    private double rateOut;
-    private String companyOut;
     private String remarkOut;
 
     @CreationTimestamp
