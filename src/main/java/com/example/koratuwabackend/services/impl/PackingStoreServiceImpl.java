@@ -2,6 +2,7 @@ package com.example.koratuwabackend.services.impl;
 
 import com.example.koratuwabackend.models.PackingStore;
 import com.example.koratuwabackend.repositories.PackingStoreRepository;
+import com.example.koratuwabackend.services.PackingStoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

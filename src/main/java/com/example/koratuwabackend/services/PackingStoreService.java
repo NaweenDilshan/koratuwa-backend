@@ -1,4 +1,4 @@
-package com.example.koratuwabackend.services.impl;
+package com.example.koratuwabackend.services;
 
 import com.example.koratuwabackend.models.PackingStore;
 

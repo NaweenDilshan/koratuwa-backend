@@ -22,6 +22,7 @@ public class PackingStore {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String deliveryOrNot;
+
     private String storePackingTypeIn; //Peppercorns
     private double OutSpicesQuantity; //2kg
     private String packetTypeIn; //50g, 100g
@@ -35,4 +36,11 @@ public class PackingStore {
     private String packetQuantityOut;
     private String nameOut;
     private String remarkOut;
+
+    @CreationTimestamp
+    @Column(name = "created_at", updatable = false)
+    private LocalDateTime createdAt;
+    @UpdateTimestamp
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
 }
