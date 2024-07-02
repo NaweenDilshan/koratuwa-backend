@@ -34,6 +34,11 @@ public class Bill {
     private double netTotal;
     private String receivedBy;
     private String salesRefBy;
+    private String returnOrNot;
+    private String returnSpicesType;
+    private String returnPacketType;
+    private String returnQuantity;
+    private String returnRate;
 
     @ElementCollection
     @CollectionTable(name = "product_details", joinColumns = @JoinColumn(name = "bill_id"))
