@@ -35,14 +35,14 @@ public class Bill {
     private String receivedBy;
     private String salesRefBy;
     private String returnOrNot;
-    private String returnSpicesType;
-    private String returnPacketType;
-    private String returnQuantity;
-    private String returnRate;
 
     @ElementCollection
     @CollectionTable(name = "product_details", joinColumns = @JoinColumn(name = "bill_id"))
     private List<Product> products;
+
+    @ElementCollection
+    @CollectionTable(name = "return_details", joinColumns = @JoinColumn(name = "bill_id"))
+    private List<ReturnDetail> returnDetails;
 
     @CreationTimestamp
     @Column(name = "created_at", updatable = false)
@@ -60,6 +60,20 @@ public class Bill {
     public static class Product {
         private String product;
         private String type;
+        private int quantity;
+        private double rate;
+        private double price;
+    }
+
+    @Embeddable
+    @Getter
+    @Setter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @Builder
+    public static class ReturnDetail {
+        private String spicesType;
+        private String packetType;
         private int quantity;
         private double rate;
         private double price;
